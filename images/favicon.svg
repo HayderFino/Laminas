@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fondo -->
+  <rect width="64" height="64" fill="#1a3d5c" rx="8"/>
+  
+  <!-- Engranaje principal -->
+  <g fill="#ff9800" opacity="0.9">
+    <!-- Dientes del engranaje externo -->
+    <circle cx="32" cy="32" r="20"/>
+    <circle cx="32" cy="32" r="16" fill="#1a3d5c"/>
+    <circle cx="32" cy="32" r="12" fill="#ff9800"/>
+    <circle cx="32" cy="32" r="8" fill="#1a3d5c"/>
+    
+    <!-- Diente superior -->
+    <rect x="30" y="8" width="4" height="6" fill="#ff9800"/>
+    <!-- Diente derecha -->
+    <rect x="50" y="30" width="6" height="4" fill="#ff9800"/>
+    <!-- Diente inferior -->
+    <rect x="30" y="50" width="4" height="6" fill="#ff9800"/>
+    <!-- Diente izquierda -->
+    <rect x="8" y="30" width="6" height="4" fill="#ff9800"/>
+  </g>
+  
+  <!-- Engranaje secundario -->
+  <g fill="#2196f3" opacity="0.8">
+    <circle cx="45" cy="19" r="8"/>
+    <circle cx="45" cy="19" r="5" fill="#1a3d5c"/>
+  </g>
+</svg>
