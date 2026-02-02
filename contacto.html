@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Mismo head que index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Cotización | Corte Láser y Láminas</title>
+    <meta name="description" content="Solicita tu cotización para servicios de corte láser o compra de láminas. Rápido y sin compromiso.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-scissors me-2"></i><span class="fw-bold">CORTE</span> LÁSER
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary active" href="cotizacion.html">Cotizar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de Página -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-5 fw-bold">Solicitar Cotización</h1>
+                    <p class="lead">Completa el formulario y te enviaremos un presupuesto sin compromiso</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Cotización -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-5">
+                            <div class="row mb-4">
+                                <div class="col-lg-12 text-center">
+                                    <h3 class="text-primary">Formulario de Cotización</h3>
+                                    <p class="text-muted">Proporciona la mayor cantidad de detalles para una cotización precisa</p>
+                                </div>
+                            </div>
+
+                            <form id="cotizacionForm">
+                                <!-- Información del Cliente -->
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <h5 class="border-bottom pb-2 mb-3">Información del Cliente</h5>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cotizacionNombre" class="form-label">Nombre completo *</label>
+                                        <input type="text" class="form-control" id="cotizacionNombre" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cotizacionEmpresa" class="form-label">Empresa</label>
+                                        <input type="text" class="form-control" id="cotizacionEmpresa">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cotizacionEmail" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="cotizacionEmail" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cotizacionTelefono" class="form-label">Teléfono *</label>
+                                        <input type="tel" class="form-control" id="cotizacionTelefono" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="cotizacionDireccion" class="form-label">Dirección (para envío)</label>
+                                        <input type="text" class="form-control" id="cotizacionDireccion">
+                                    </div>
+                                </div>
+
+                                <!-- Tipo de Solicitud -->
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <h5 class="border-bottom pb-2 mb-3">¿Qué necesitas?</h5>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Tipo de solicitud *</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipoSolicitud" id="corteLaser" value="corte-laser" checked>
+                                            <label class="form-check-label" for="corteLaser">
+                                                Servicio de Corte Láser
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipoSolicitud" id="ventaLaminas" value="venta-laminas">
+                                            <label class="form-check-label" for="ventaLaminas">
+                                                Compra de Láminas/Materiales
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipoSolicitud" id="servicioCompleto" value="servicio-completo">
+                                            <label class="form-check-label" for="servicioCompleto">
+                                                Servicio Completo (Corte + Materiales)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="urgencia" class="form-label">Urgencia del proyecto</label>
+                                        <select class="form-select" id="urgencia">
+                                            <option value="normal">Normal (5-7 días hábiles)</option>
+                                            <option value="urgente">Urgente (2-3 días hábiles)</option>
+                                            <option value="muy-urgente">Muy urgente (24-48 horas)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Detalles del Material -->
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <h5 class="border-bottom pb-2 mb-3">Detalles del Material</h5>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="material" class="form-label">Material *</label>
+                                        <select class="form-select" id="material" required>
+                                            <option value="" selected disabled>Selecciona un material</option>
+                                            <option value="acero-carbono">Acero al Carbono</option>
+                                            <option value="acero-inoxidable">Acero Inoxidable</option>
+                                            <option value="aluminio">Aluminio</option>
+                                            <option value="acrilico">Acrílico/Plexiglás</option>
+                                            <option value="laton">Latón/Cobre</option>
+                                            <option value="mdf">MDF/Triplay</option>
+                                            <option value="otro">Otro material</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="espesor" class="form-label">Espesor (mm) *</label>
+                                        <input type="number" class="form-control" id="espesor" step="0.1" min="0.1" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="dimensiones" class="form-label">Dimensiones (largo x ancho en mm)</label>
+                                        <input type="text" class="form-control" id="dimensiones" placeholder="Ej: 1000x2000">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cantidad" class="form-label">Cantidad *</label>
+                                        <input type="number" class="form-control" id="cantidad" min="1" required>
+                                        <small class="form-text text-muted">Para corte: cantidad de piezas. Para láminas: cantidad de unidades.</small>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="detallesMaterial" class="form-label">Detalles adicionales del material</label>
+                                        <textarea class="form-control" id="detallesMaterial" rows="3" placeholder="Especificaciones técnicas, acabados, calidad, etc."></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Archivos -->
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <h5 class="border-bottom pb-2 mb-3">Archivos del Proyecto</h5>
+                                        <p class="text-muted mb-3">Sube tus archivos de diseño para una cotización más precisa (opcional pero recomendado)</p>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="archivos" class="form-label">Archivos de diseño</label>
+                                        <input class="form-control" type="file" id="archivos" multiple>
+                                        <small class="form-text text-muted">Formatos aceptados: DXF, DWG, PDF, AI, CDR, STEP (máx. 10MB por archivo)</small>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="linkArchivos" class="form-label">O enlace a archivos</label>
+                                        <input type="url" class="form-control" id="linkArchivos" placeholder="https://drive.google.com/...">
+                                        <small class="form-text text-muted">Puedes compartir un enlace de Google Drive, Dropbox, etc.</small>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="instrucciones" class="form-label">Instrucciones especiales</label>
+                                        <textarea class="form-control" id="instrucciones" rows="3" placeholder="Tolerancias, acabados, tratamiento posterior, etc."></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Información Adicional -->
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <h5 class="border-bottom pb-2 mb-3">Información Adicional</h5>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="informacionAdicional" class="form-label">¿Algo más que debamos saber?</label>
+                                        <textarea class="form-control" id="informacionAdicional" rows="3" placeholder="Detalles adicionales sobre tu proyecto, necesidades especiales, etc."></textarea>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fechaRequerida" class="form-label">Fecha requerida de entrega</label>
+                                        <input type="date" class="form-control" id="fechaRequerida">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="formaContacto" class="form-label">Preferencia de contacto</label>
+                                        <select class="form-select" id="formaContacto">
+                                            <option value="email">Email</option>
+                                            <option value="telefono">Llamada telefónica</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Términos y Envío -->
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="terminos" required>
+                                            <label class="form-check-label" for="terminos">
+                                                He leído y acepto los <a href="#" class="text-primary">términos y condiciones</a> *
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="newsletter">
+                                            <label class="form-check-label" for="newsletter">
+                                                Deseo recibir información sobre nuevos servicios y promociones
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Botón de Envío -->
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                                            <i class="bi bi-send me-2"></i> Enviar solicitud de cotización
+                                        </button>
+                                        <p class="text-muted mt-3 small">Te responderemos en un plazo máximo de 24 horas hábiles</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información de Contacto Alternativa -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-primary border-2">
+                        <div class="card-body p-4 text-center">
+                            <h4 class="text-primary mb-3">¿Prefieres contactarnos directamente?</h4>
+                            <p class="mb-3">También puedes contactarnos por teléfono, WhatsApp o correo electrónico para solicitar tu cotización.</p>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <i class="bi bi-telephone text-primary fs-3 mb-2"></i>
+                                    <h5>Teléfono</h5>
+                                    <p class="mb-0">+56 2 2345 6789</p>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <i class="bi bi-whatsapp text-primary fs-3 mb-2"></i>
+                                    <h5>WhatsApp</h5>
+                                    <p class="mb-0">+56 9 8765 4321</p>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <i class="bi bi-envelope text-primary fs-3 mb-2"></i>
+                                    <h5>Email</h5>
+                                    <p class="mb-0">cotizaciones@cortelaser.cl</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página (igual que index.html) -->
+    <footer class="footer py-5">
+        <!-- Copiar el mismo footer de index.html -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Corte Láser & Láminas</h5>
+                    <p class="text-muted">Tu socio confiable en servicios de corte láser de precisión y suministro de láminas de calidad.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-muted">Inicio</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-muted">Nosotros</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-muted">Servicios</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-muted">Productos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Más</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="proyectos.html" class="text-muted">Proyectos</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-muted">Contacto</a></li>
+                        <li class="mb-2"><a href="cotizacion.html" class="text-muted">Cotización</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Contacto</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Av. Industrial 1234, Santiago, Chile</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +56 2 2345 6789</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@solucionesindustriales.cl</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5" style="border-color: #444;">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">© 2026 Corte Láser & Láminas. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-muted mb-0"><a href="#" class="text-muted">Política de privacidad</a> | <a href="#" class="text-muted">Términos de servicio</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/56912345678?text=Hola,%20me%20interesan%20sus%20servicios%20industriales" 
+       class="whatsapp-btn" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS Personalizado -->
+    <script src="script.js"></script>
+
+    <!-- Script para formulario de cotización -->
+    <script>
+        document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('cotizacionNombre').value;
+            const email = document.getElementById('cotizacionEmail').value;
+            const tipoSolicitud = document.querySelector('input[name="tipoSolicitud"]:checked').value;
+            
+            // Mostrar mensaje de éxito
+            alert(`¡Gracias ${nombre}! Hemos recibido tu solicitud de cotización para ${tipoSolicitud}. Te enviaremos una respuesta al correo ${email} en las próximas 24 horas.`);
+            
+            // Reiniciar formulario (en un caso real, aquí enviarías los datos a un servidor)
+            this.reset();
+        });
+
+        // Establecer fecha mínima como hoy
+        document.getElementById('fechaRequerida').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
