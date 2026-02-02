@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Mismo head que index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Láminas y Materiales Industriales</title>
+    <meta name="description" content="Venta de láminas de acero, acero inoxidable, aluminio, acrílico y otros materiales industriales.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-scissors me-2"></i><span class="fw-bold">CORTE</span> LÁSER
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary" href="cotizacion.html">Cotizar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de Página -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-5 fw-bold">Nuestros Productos</h1>
+                    <p class="lead">Materiales industriales de calidad para tus proyectos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="py-5" id="laminas">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Láminas y Placas Metálicas</h2>
+                    <p class="text-muted">Disponibles en diversos espesores, dimensiones y acabados</p>
+                </div>
+            </div>
+
+            <!-- Productos -->
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100 border-0 shadow">
+                        <div class="product-badge">Más vendido</div>
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             class="card-img-top" alt="Acero al carbono">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Acero al Carbono</h4>
+                            <p class="card-text text-muted">Láminas de acero A36 y A572 en espesores desde 0.5mm hasta 25mm.</p>
+                            <div class="product-specs mb-3">
+                                <p><strong>Espesores:</strong> 0.5mm - 25mm</p>
+                                <p><strong>Dimensiones:</strong> 1220x2440mm, 1500x3000mm</p>
+                                <p><strong>Acabados:</strong> Negro, galvanizado, prepintado</p>
+                            </div>
+                            <a href="cotizacion.html?producto=acero-carbono" class="btn btn-primary">Solicitar cotización</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100 border-0 shadow">
+                        <img src="https://images.unsplash.com/photo-1574731701765-d32d48b8c8b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             class="card-img-top" alt="Acero inoxidable">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Acero Inoxidable</h4>
+                            <p class="card-text text-muted">Láminas de acero inoxidable 304 y 316 en diversos acabados.</p>
+                            <div class="product-specs mb-3">
+                                <p><strong>Espesores:</strong> 0.5mm - 20mm</p>
+                                <p><strong>Dimensiones:</strong> 1000x2000mm, 1220x2440mm</p>
+                                <p><strong>Acabados:</strong> Espejo, satinado, mate</p>
+                            </div>
+                            <a href="cotizacion.html?producto=acero-inoxidable" class="btn btn-primary">Solicitar cotización</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100 border-0 shadow">
+                        <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             class="card-img-top" alt="Aluminio">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Aluminio</h4>
+                            <p class="card-text text-muted">Láminas de aluminio serie 5000 y 6000 para aplicaciones industriales.</p>
+                            <div class="product-specs mb-3">
+                                <p><strong>Espesores:</strong> 0.8mm - 15mm</p>
+                                <p><strong>Dimensiones:</strong> 1220x2440mm, 1500x3000mm</p>
+                                <p><strong>Aleaciones:</strong> 5052, 6061, 6082</p>
+                            </div>
+                            <a href="cotizacion.html?producto=aluminio" class="btn btn-primary">Solicitar cotización</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100 border-0 shadow">
+                        <img src="https://images.unsplash.com/photo-1568871391147-70420673544f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             class="card-img-top" alt="Acrílico">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Acrílico/Plexiglás</h4>
+                            <p class="card-text text-muted">Placas de acrílico transparente, colores y opal para diversos usos.</p>
+                            <div class="product-specs mb-3">
+                                <p><strong>Espesores:</strong> 2mm - 30mm</p>
+                                <p><strong>Dimensiones:</strong> 1220x2440mm, 1500x3000mm</p>
+                                <p><strong>Colores:</strong> Transparente, blanco, negro, colores</p>
+                            </div>
+                            <a href="cotizacion.html?producto=acrilico" class="btn btn-primary">Solicitar cotización</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100 border-0 shadow">
+                        <img src="https://images.unsplash.com/photo-1579226905180-636b76d96082?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             class="card-img-top" alt="Latón">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Latón y Cobre</h4>
+                            <p class="card-text text-muted">Láminas de latón y cobre para aplicaciones decorativas y eléctricas.</p>
+                            <div class="product-specs mb-3">
+                                <p><strong>Espesores:</strong> 0.5mm - 10mm</p>
+                                <p><strong>Dimensiones:</strong> 1000x2000mm</p>
+                                <p><strong>Aleaciones:</strong> Latón 70/30, cobre C110</p>
+                            </div>
+                            <a href="cotizacion.html?producto=laton-cobre" class="btn btn-primary">Solicitar cotización</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100 border-0 shadow">
+                        <div class="product-badge">Nuevo</div>
+                        <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             class="card-img-top" alt="MDF">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">MDF y Triplay</h4>
+                            <p class="card-text text-muted">Tableros de MDF y triplay para aplicaciones en diseño y construcción.</p>
+                            <div class="product-specs mb-3">
+                                <p><strong>Espesores:</strong> 3mm - 25mm</p>
+                                <p><strong>Dimensiones:</strong> 1220x2440mm</p>
+                                <p><strong>Tipos:</strong> MDF estándar, hidrófugo, triplay</p>
+                            </div>
+                            <a href="cotizacion.html?producto=mdf-triplay" class="btn btn-primary">Solicitar cotización</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información adicional -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 bg-light shadow">
+                        <div class="card-body p-5">
+                            <h3 class="text-center text-primary mb-4">¿No encuentras lo que buscas?</h3>
+                            <p class="text-center mb-4">Contamos con una amplia variedad de materiales adicionales. Contáctanos para consultar disponibilidad de productos especiales o pedidos personalizados.</p>
+                            <div class="text-center">
+                                <a href="contacto.html" class="btn btn-outline-primary btn-lg me-3">Contactar asesor</a>
+                                <a href="cotizacion.html" class="btn btn-primary btn-lg">Solicitar cotización general</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página (igual que index.html) -->
+    <footer class="footer py-5">
+        <!-- Copiar el mismo footer de index.html -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Corte Láser & Láminas</h5>
+                    <p class="text-muted">Tu socio confiable en servicios de corte láser de precisión y suministro de láminas de calidad.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-muted">Inicio</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-muted">Nosotros</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-muted">Servicios</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-muted">Productos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Más</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="proyectos.html" class="text-muted">Proyectos</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-muted">Contacto</a></li>
+                        <li class="mb-2"><a href="cotizacion.html" class="text-muted">Cotización</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Contacto</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Av. Industrial 1234, Santiago, Chile</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +56 2 2345 6789</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@solucionesindustriales.cl</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5" style="border-color: #444;">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">© 2026 Corte Láser & Láminas. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-muted mb-0"><a href="#" class="text-muted">Política de privacidad</a> | <a href="#" class="text-muted">Términos de servicio</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/56912345678?text=Hola,%20me%20interesan%20sus%20servicios%20industriales" 
+       class="whatsapp-btn" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS Personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
