@@ -321,11 +321,56 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Aquí normalmente enviarías el formulario a un servidor
-            // Por ahora solo mostraremos un mensaje de éxito
-            alert('¡Gracias por tu mensaje! Te contactaremos en breve.');
-            this.reset();
+
+            // URL de Google Apps Script para guardar en Google Sheets
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwS1qW1jlKOjv-eYjsQVeqVqO1c4_BTBYsTrJPKzzTStUmSlZcZ7kQ7bdYyUh5K_8i7/exec';
+
+            // Campos a enviar
+            const fields = ['nombre','empresa','email','telefono','asunto','mensaje'];
+
+            // Crear iframe oculto para que el envío no genere errores CORS en la consola
+            let iframe = document.getElementById('hidden_iframe');
+            if (!iframe) {
+                iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.name = 'hidden_iframe';
+                iframe.id = 'hidden_iframe';
+                document.body.appendChild(iframe);
+            }
+
+            // Crear un formulario temporal con inputs 'name' para enviar al Apps Script
+            const tempForm = document.createElement('form');
+            tempForm.style.display = 'none';
+            tempForm.method = 'GET';
+            tempForm.action = GOOGLE_SCRIPT_URL;
+            tempForm.target = 'hidden_iframe';
+
+            fields.forEach(name => {
+                const el = document.getElementById(name);
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = name;
+                input.value = el ? el.value : '';
+                tempForm.appendChild(input);
+            });
+
+            document.body.appendChild(tempForm);
+
+            // Enviar el formulario al iframe (esto evita CORS porque no es fetch/XHR)
+            tempForm.submit();
+
+            // Mostrar confirmación al usuario y limpiar formulario local
+            setTimeout(() => {
+                alert('¡Gracias por tu mensaje! Te contactaremos en breve.');
+                document.getElementById('contactForm').reset();
+                // remover el formulario temporal
+                document.body.removeChild(tempForm);
+            }, 800);
+
+            // Consejo para desarrolladores: si ves problemas, sirve los archivos vía HTTP
+            if (location.protocol === 'file:') {
+                console.warn('Estás abriendo el sitio desde archivos locales (origin=null). Para evitar problemas, sirve el proyecto con un servidor local: e.g. `python3 -m http.server` y abre http://localhost:8000');
+            }
         });
     </script>
 </body>
